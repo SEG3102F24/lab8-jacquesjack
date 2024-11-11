@@ -1,0 +1,27 @@
+type Query {
+  allEmployees: [Employee]
+}
+
+type Employee {
+  dateOfBirth: String!
+  name: String!
+  city: String!
+  salary: Float!
+  gender: String
+  email: String
+  id: String!
+}
+
+input CreateEmployeeInput {
+  dateOfBirth: String!
+  name: String!
+  city: String!
+  salary: Float!
+  gender: String
+  email: String
+  id: String!
+}
+
+type Mutation {
+  newEmployee(CreateEmployeeInput: CreateEmployeeInput!): Employee!
+}
